@@ -5,3 +5,4 @@ description = "Private repository containing (mainly) research code."
 
 [packages]
 8523ee09-f87b-436d-8687-f5a8240ec6b7 = { name = "MyPlot", path = "M/MyPlot" }
+ddafdd3f-bffb-4613-bf4c-94e59b398e54 = { name = "PConv", path = "P/PConv" }

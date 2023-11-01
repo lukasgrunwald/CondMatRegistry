@@ -1,0 +1,3 @@
+name = "PConv"
+uuid = "ddafdd3f-bffb-4613-bf4c-94e59b398e54"
+repo = "https://github.com/lukasgrunwald/PConv.jl.git"
