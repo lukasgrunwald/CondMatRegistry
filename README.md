@@ -17,8 +17,7 @@ To add or update packages in the registry, `dev` the package to be added and cal
 ```julia
 register("MyPackage"; registry = "CondMatRegistry")
 ```
-
-This makes it possible to have CI and rapid development for interdependent packages hosted in private GitHub repositories
+The most convenient workflow for this is to have a local environment in the `dev` folder that has the packages `dev`ed via the local path.
 
 ## RoadMap
 
