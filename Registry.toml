@@ -1,0 +1,6 @@
+name = "CondMatRegistry"
+uuid = "fa72d679-44c2-4f33-8f7a-1b22ca4674e1"
+repo = "git@github.com:lukasgrunwald/CondMatRegistry.git"
+description = "Private repository containing (mainly) research code."
+
+[packages]
