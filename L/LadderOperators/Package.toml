@@ -1,0 +1,3 @@
+name = "LadderOperators"
+uuid = "d27c24bd-84bf-4c52-914b-d12f8784db43"
+repo = "https://github.com/lukasgrunwald/LadderOperators.jl.git"
