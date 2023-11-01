@@ -4,3 +4,4 @@ repo = "git@github.com:lukasgrunwald/CondMatRegistry.git"
 description = "Private repository containing (mainly) research code."
 
 [packages]
+8523ee09-f87b-436d-8687-f5a8240ec6b7 = { name = "MyPlot", path = "M/MyPlot" }

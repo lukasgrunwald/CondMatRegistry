@@ -1,0 +1,3 @@
+name = "MyPlot"
+uuid = "8523ee09-f87b-436d-8687-f5a8240ec6b7"
+repo = "https://github.com/lukasgrunwald/MyPlot.jl.git"
