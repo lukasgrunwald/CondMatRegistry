@@ -1,0 +1,3 @@
+name = "RegistryDebugger"
+uuid = "f2a00f92-3800-41f4-a80d-3c13bd45b518"
+repo = "git@github.com:lukasgrunwald/RegistryDebugger.jl.git"
