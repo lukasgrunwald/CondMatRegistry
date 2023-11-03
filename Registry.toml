@@ -4,6 +4,7 @@ repo = "git@github.com:lukasgrunwald/CondMatRegistry.git"
 description = "Private repository containing (mainly) research code."
 
 [packages]
+57bfc871-17ad-47bf-8429-c0485d8290d3 = { name = "PrivateRegistryDebugger", path = "P/PrivateRegistryDebugger" }
 8523ee09-f87b-436d-8687-f5a8240ec6b7 = { name = "MyPlot", path = "M/MyPlot" }
 caac3ea5-a678-4878-8bc7-c03e822dd383 = { name = "GFFT", path = "G/GFFT" }
 d27c24bd-84bf-4c52-914b-d12f8784db43 = { name = "LadderOperators", path = "L/LadderOperators" }
