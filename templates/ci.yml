@@ -27,10 +27,17 @@ jobs:
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
+      - uses: webfactory/ssh-agent@v0.8.0 # Add private deploy key to ssh agent
+        with:
+            ssh-private-key: | # Add multiple SSH-Keys
+              ${{ secrets.PRIVATE_GH_KEY }}
+      # - run: | # This is only needed for Julia < v"1.7" since known_hosts are baked into the LibGit2 package
+      #     ssh-keyscan github.com >> ~/.ssh/known_hosts
+      #   shell: bash
       - uses: lukasgrunwald/julia-buildpkg@localregistry
         with:
-          localregistry: >- # Collect URL's into space seperated string
+          localregistry: | # Collect URL's into newline seperated string
             https://github.com/lukasgrunwald/CondMatRegistry.git
-          token: ${{ secrets.GITHUB_TOKEN }}
+          git_cli: false
       - uses: julia-actions/julia-runtest@v1
   
