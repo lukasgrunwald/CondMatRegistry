@@ -47,7 +47,7 @@ For Julia 1.7 and above, the `git_cli` option can be used to set the `JULIA_PKG_
 
 ## CI Registrator
 
-The package version in a local-registry hosted on GitHub can be automatically updated using CI, using our [composite action](https://github.com/lukasgrunwald/julia-register-local). To repo calling the action needs to write access to the local-registries GitHub repository. This can be conventiently achieved using a private deploy key as a repository secret.
+The package version in a local-registry hosted on GitHub can be automatically updated with CI, using our [composite action](https://github.com/lukasgrunwald/julia-register-local). To repo calling the action needs to have write access to the local-registries GitHub repository. This can be conventiently achieved using a private deploy key as a repository secret.
 
 A complete example is collected in the `/template` folder and a minimal snippet is shown below
 
