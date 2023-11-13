@@ -12,6 +12,7 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: ${{ startsWith(github.ref, 'refs/pull/') }}
 jobs:
+  # Unit testing
   test:
     name: Julia ${{ matrix.version }} - ${{ matrix.os }} - ${{ matrix.arch }} - ${{ github.event_name }}
     runs-on: ${{ matrix.os }}
@@ -40,4 +41,16 @@ jobs:
             https://github.com/lukasgrunwald/CondMatRegistry.git
           git_cli: false
       - uses: julia-actions/julia-runtest@v1
+  
+  # Registering package
+  register:
+    needs: test # Only run this once test is completed
+    name: Register Package
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lukasgrunwald/julia-register-local@master
+      with:
+        localregistry: git@github.com:lukasgrunwald/CondMatRegistry.git
+        ssh_keys: |
+           ${{ secrets.REGISTRY_DEPLOY }}
   
