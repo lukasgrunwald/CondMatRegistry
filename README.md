@@ -19,7 +19,7 @@ register("MyPackage"; registry = "CondMatRegistry")
 ```
 The most convenient workflow for this is to have a local environment in the `dev` folder that has the packages `dev`ed via the local path. We provide a template for registering new package versions using CI.
 
-## Using local repository in CI
+## Using local registry in CI
 
 Example for a CI setup in the `/template` folder. Personal registries, e.g. created with [LocalRegistry.jl](https://github.com/GunnarFarneback/LocalRegistry.jl), can be added to the CI using the `localregistry` input option of the `julia-actions/julia-buildpkg` action. If the personal registry as well as packages needed in the current project are public, no additional setup is required if the registry url is specified in https-format.
 
@@ -47,7 +47,7 @@ For Julia 1.7 and above, the `git_cli` option can be used to set the `JULIA_PKG_
 
 ## CI Registrator
 
-The package version in a local-registry hosted on GitHub can be automatically updated with CI, using our [composite action](https://github.com/lukasgrunwald/julia-register-local). To repo calling the action needs to have write access to the local-registries GitHub repository. This can be conventiently achieved using a private deploy key as a repository secret.
+The package version in a local-registry hosted on GitHub can be automatically updated with CI, using our [composite action](https://github.com/lukasgrunwald/julia-register-local). To repo calling the action needs to have write access to the local-registries GitHub repository. This can be conventiently achieved using a private part of the deploy key as a repository secret.
 
 A complete example is collected in the `/template` folder and a minimal snippet is shown below
 
